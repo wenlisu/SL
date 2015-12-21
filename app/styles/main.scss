@@ -35,6 +35,7 @@ $browser-default-font-size: 18px !default;
 @media (min-width: 1200px) {
     .container {
         width: 1170px;
+        height: 100%;
     }
     html {
         width: 100%;
@@ -107,6 +108,7 @@ a:hover {
 
 img {
     border: none;
+    width: 100%;
 }
 
 em {
@@ -217,10 +219,6 @@ h5 {
     border-bottom: 4px solid #ff8500
 }
 
-.topicfixed {
-    height: 90px;
-}
-
 .logoLink {
     background-image: url(../images/logo.png);
 }
@@ -256,7 +254,6 @@ h5 {
 
 .navbar-toggle {
     float: left;
-    margin-top: 24px;
     border: none;
     top: 50%;
     transform: translateY(-50%);
@@ -293,10 +290,11 @@ h5 {
     margin: 10px 0;
     display: inline-block;
 }
-.About_nav{
-    position: absolute;
 
+.About_nav {
+    position: absolute;
 }
+
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #ff8500;
     width: 18px;
@@ -315,9 +313,9 @@ h5 {
     opacity: 0.98;
     width: 100%;
     height: 100%;
-    position: absolute;
     left: 0;
     top: 0;
+    position: fixed;
     ul {
         margin: 0 15px;
         li {
@@ -382,8 +380,6 @@ h5 {
 
 
 /* banner */
-
-
 
 .txtdown a:link,
 .txtdown a:visited {
@@ -939,14 +935,17 @@ h6 {
         padding-top: 34px;
         padding-bottom: 33px;
     }
+    .navbar-fixed-top {
+        height: 90px;
+    }
 }
 
 @media (max-width: 768px) {
-    .lr-tool-rb a{
+    .lr-tool-rb a {
         width: 10%;
         height: auto;
     }
-    .navbar-header{
+    .navbar-header {
         height: 40px;
     }
     .footleft {
@@ -1004,7 +1003,6 @@ h6 {
             padding-top: pxTorem(80px);
         }
     }
-
     .navbar-fixed-top .navbar-collapse {
         min-height: 340px;
     }
@@ -1029,7 +1027,6 @@ h6 {
         }
     }
     .topnav {
-        
         overflow: hidden;
     }
     .pull-right {
@@ -1056,5 +1053,97 @@ h6 {
     .share {
         display: block;
         width: 17px;
+    }
+    .container {
+        width: 100%;
+        height: 100%;
+        .carousel-caption {
+            padding: 0 0;
+        }
+    }
+}
+
+// index2
+$body-color:#3d4456;
+$line-height:24px;
+$width:100% !default;
+$height: 100% !default;
+$down-icon-width:260px;
+$down-icon-height:80px;
+$down-icon:image-url('../images/btn01.png');
+@mixin link-colors($normal,
+$hover,
+$visited) {
+    color: $normal;
+    &:hover {
+        color: $hover;
+    }
+    &:visited {
+        color: $visited;
+    }
+}
+
+.carousel-caption {
+    height: 20%;
+    position: absolute;
+    left: 56.5%;
+    top: 29%;
+    padding-bottom: 0;
+}
+
+.slide {
+    overflow: hidden;
+    margin-top: 65px;
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 768px) {}
+
+.carousel .item {
+    max-height: 890px;
+}
+
+.carousel {
+    .item {
+        position: relative;
+        .down-icon {
+            position: absolute;
+            width: 13%;
+            height: 11.8%;
+            a {
+                width: $width;
+                height: $height;
+                display: block;
+                background: url(../images/btn01.png) no-repeat 0 0;
+                background-size: 100% auto;
+                &:hover {
+                    background-position: -0 -85px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .slide {
+        margin-top: 27px;
+        .item {
+            .down-icon {
+                padding: 0;
+                a {
+                    height: 62%;
+                    &:hover {
+                        background-position: -0 -42px;
+                    }
+                }
+            }
+        }
+    }
+    .new-show img {
+        height: 100%;
+        width: auto;
     }
 }
