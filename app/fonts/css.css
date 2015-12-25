@@ -39,6 +39,8 @@ body {
 
 body {
     background: #fff;
+    
+    min-width: 448px;
 }
 
 ul,
@@ -49,7 +51,7 @@ li {
 
 a:link,
 a:visited {
-    color: #333;
+    background-color: none;
     text-decoration: none;
 }
 
@@ -101,7 +103,7 @@ h5 {
 }
 
 .toppic {
-    max-width: 980px;
+    max-width: 1140px;
     width: 100%;
     height: 90px;
     margin: 0 auto;
@@ -482,13 +484,14 @@ h5 {
     overflow: hidden;
     text-indent: -9999px;
     background: #fff url(../images/pic1.png) no-repeat center top;
+  /*  background-size: 174% 95%;*/
 }
 
 .activebg {
     position: relative;
     width: 100%;
     height: 900px;
-    background: #fff;
+    
     background-attachment: fixed;
     background-position: center 0;
     background-repeat: no-repeat;
@@ -496,12 +499,14 @@ h5 {
 
 .fisrtbg {
     background-image: url(../images/bg2.png);
-    background-size: 100% auto;
+    
+    min-width: 448px;
 }
 
 .secondbg {
     background-image: url(../images/bg3.png);
-    background-size: 100% auto;
+
+    min-width: 448px;
 }
 
 .txtwrap p {
@@ -524,6 +529,7 @@ h5 {
     position: absolute;
     bottom: -270px;
     width: 100%;
+    opacity: 0;
     height: 270px;
     background: transparent url(../images/mask1.png) no-repeat center top;
     background-size: 100% 100%;
@@ -532,6 +538,7 @@ h5 {
 .mask2-02 {
     position: absolute;
     bottom: -270px;
+    opacity: 0;
     width: 100%;
     height: 270px;
     background: transparent url(../images/mask2.png) no-repeat center top;
@@ -905,19 +912,239 @@ h5 {
     background-position: 0 0;
 }
 
+.logo-index {
+    width: 500px;
+    height: 100%;
+    display: inline-block;
+}
+
 @media screen and (min-width:760px) {
     #wapnav {
         height: 1px;
         width: 1px;
         overflow: hidden;
     }
+    .crossbanenr {}
+    .flex-control-nav {
+        bottom: 200px;
+    }
+    .am-share {
+        display: none;
+    }
+}
+.jiathis_style_24x24 .jtico{
+    height: 100px !importa nt;
+}
+@media screen and (max-width:980px) {
+    .lr-tool-rb{
+        display: none;
+    }
+
+.content h1 {
+
+    background-size: 174% 95%;
 }
 
-@media screen and (max-width:980px) {
+    .am-share {
+        display: block;
+    }
+    /*share*/
+    .am-share {
+        font-size: 40px;
+        border-radius: 0;
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        text-align: center;
+        -webkit-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+        transform: translateY(100%);
+        -webkit-transition: -webkit-transform 300ms;
+        transition: transform 300ms;
+        width: 100%;
+        z-index: 1110;
+    }
+    .am-modal-active {
+        transform: translateY(0px);
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0)
+    }
+    .am-modal-out {
+        z-index: 1109;
+        -webkit-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+        transform: translateY(100%)
+    }
+    .am-share-title {
+        background-color: #f8f8f8;
+        border-bottom: 1px solid #fff;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        color: #555;
+        font-weight: 400;
+        margin: 0 23px;
+        padding: 26px 0 0;
+        text-align: center;
+    }
+    .am-share-title::after {
+        border-bottom: 1px solid #dfdfdf;
+        content: "";
+        display: block;
+        height: 0;
+        margin-top: 10px;
+        width: 100%;
+    }
+    .am-share-footer {
+        margin: 25px;
+    }
+    .am-share-footer .share_btn {
+        color: #555;
+        display: block;
+        width: 100%;
+        background-color: #e6e6e6;
+        border: 1px solid #e6e6e6;
+        border-radius: 0;
+        cursor: pointer;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 1.2;
+        padding: 0.8em 0;
+        text-align: center;
+        transition: background-color 300ms ease-out 0s, border-color 300ms ease-out 0s;
+        vertical-align: middle;
+        white-space: nowrap;
+        font-family: "微软雅黑";
+    }
+    .am-share-sns {
+        background-color: #f8f8f8;
+        border-radius: 0 0 6px 6px;
+        margin: 0 23px;
+        padding-top: 40px;
+        padding-bottom: 31px;
+        height: auto;
+        zoom: 1;
+        overflow: auto;
+        position: relative;
+    }
+    .am-share-sns li {
+        margin-bottom: 15px;
+        display: block;
+        float: left;
+        height: auto;
+        width: 25%;
+    }
+    .am-share-sns a {
+        color: #555;
+        display: block;
+        text-decoration: none;
+    }
+    .am-share-sns span {
+        display: block;
+        margin-top: 27px;
+    }
+    .am-share-sns li i {
+        background-position: center 50%;
+        background-repeat: no-repeat;
+        background-size: 36px 36px;
+        
+        color: #fff;
+        display: inline-block;
+        font-size: 18px;
+        height: 110px;
+        line-height: 36px;
+        margin-bottom: 5px;
+        width: 110px;
+    }
+    .am-share-sns .share-icon-QQ {
+        background-image: url(../images/qq_pass22@3x.png);
+        background-size: 100% auto;
+    }
+    .am-share-sns .share-icon-kongjian {
+        background-image: url(../images/qzone.png);
+        background-size: 100% auto;
+    }
+    .am-share-sns .share-icon-weixin {
+        background-image: url(../images/wechat_pass22@3x.png);
+        background-size: 100% auto;
+    }
+    .am-share-sns .share-icon-weibo {
+        background-image: url(../images/sina_pass22@3x.png);
+        background-size: 100% auto;
+    }
+    .am-share-sns .share-icon-renren {
+        background-image: url(../images/renren.png);
+        background-size: 100% auto;
+    }
+    .am-share-sns .share-icon-tenxun {
+        background-image: url(../images/tqq.png);
+        background-size: 100% auto;
+    }
+    .am-share-sns .share-icon-wangyi {
+        background-image: url(../images/wy.png);
+        background-size: 100% auto;
+    }
+    .sharebg {
+        background-color: rgba(0, 0, 0, 0.6);
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        opacity: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 100%;
+        z-index: 1100;
+        display: none;
+    }
+    .sharebg-active {
+        opacity: 1;
+        display: block;
+    }
+
+.jiathis_style_32x32 .jtico{
+    background:none !important;
+}
+.jiathis_style_32x32 .jtico_qzone{
+    position: absolute;
+    left:52px;
+    top:60px;
+  
+}
+.jiathis_style_32x32 .jiathis_txt{
+    font-size: 0px !important;
+}
+.jiathis_style_32x32 .jtico_jiathis{
+    display:none !important;
+    background: #fff !important;
+}
+.jiathis_style_32x32 .jtico{
+    width: 89px !important;
+    height: 89px !important;
+}
+.jiathis_style_32x32 .jtico_tsina{
+    position: absolute;
+    left:282px;
+    top:60px;
+}
+.jiathis_style_32x32 .jtico_tqq{
+    position: absolute;
+    right:69px;
+    top:60px;
+}
+
+.jiathis_style_32x32 .jtico_renren{
+    position: absolute;
+    right:302px;
+    top: 60px;
+}
     .topicfixed {
         height: 1px;
         width: 1px;
         overflow: hidden;
+    }
+    .flex-control-nav {
+        bottom: 600px;
     }
     #wapnav {
         position: fixed;
@@ -926,16 +1153,17 @@ h5 {
         top: 0;
         background: #2d3447;
         border-bottom: 4px solid #8c92a2;
-        height: 105px;
+        height: 121px;
         width: 100%;
     }
     .model ul {
-        margin: 105px 15px 0px 15px;
+        margin: 105px 40px 0px 40px;
         font-size: 62.5%;
     }
     .model ul li {
         width: 100%;
         height: 20%;
+        border-bottom: 1px solid #fff;
     }
     .model ul li a {
         font-size: 450%;
@@ -957,16 +1185,16 @@ h5 {
         display: block;
         color: #fff;
         border: none;
-        height: 20%;
+        height: 100%;
     }
     .model ul li:hover {
         border-bottom: 1px solid #fff;
         border-color: rgba(255, 255, 255, 0.5);
     }
     .left-nav {
-        width: 20%;
+        width: 8%;
         float: left;
-        margin-top: 38px;
+        margin-top: 47px;
         margin-left: 10px;
         text-align: left;
         cursor: pointer;
@@ -976,10 +1204,10 @@ h5 {
         margin-left: 20px;
     }
     .logo-pic {
-        width: 60%;
+        width: 82%;
         float: left;
         text-align: center;
-        margin-top: 28px;
+        margin-top: 41px;
         cursor: pointer;
     }
     .logo-pic img {
@@ -987,10 +1215,10 @@ h5 {
         width: auto;
     }
     .right-but {
-        width: 20%;
+        width: 10%;
         float: right;
         text-align: right;
-        margin-top: -49px;
+        margin-top: -50px;
         margin-right: 25px;
         cursor: pointer;
     }
@@ -999,7 +1227,7 @@ h5 {
     }
     .mask-02,
     .mask2-02 {
-        background-size: auto 100%;
+        background-size: auto 96%;
     }
     .crossbanenr li.pcqqbg,
     .crossbanenr li.wkbpbg,

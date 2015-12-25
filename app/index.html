@@ -1,14 +1,12 @@
-﻿<!doctype html>
-<html  class="no-js" lang="en">
-
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="no-js" lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
     <meta name="keywords" content="缺钱,缺钱么,缺钱么官网,缺钱么App,缺钱么客户端,缺钱么下载" />
-    <meta name="description" content="缺钱么是国内首家专为5亿年轻人量身定制的互联网信用借款平台，真正实现无抵押，3分钟极速搞定，额度无上限，还款方便快捷。缺钱么官网为您提供缺钱么App官方下载。"/>
+    <meta name="description" content="缺钱么是国内首家专为5亿年轻人量身定制的互联网信用借款平台，真正实现无抵押，3分钟极速搞定，额度无上限，还款方便快捷。缺钱么官网为您提供缺钱么App官方下载。" />
     <title>缺钱么官网</title>
     <link href="fonts/css.css" rel="stylesheet">
-    <link rel="shortcut icon" href="favicon.ico"/>
+    <link rel="shortcut icon" href="favicon.ico" />
 </head>
 
 <body>
@@ -26,10 +24,13 @@
     </div>
     <div id="wapnav">
         <div class="left-nav navbar-toggle">
-            <img src="images/About_ic@2x.png" alt="" class="About_nav"/>
+            <img src="images/About_ic@2x.png" alt="" class="About_nav" />
         </div>
-        <div class="logo-pic"><img src="images/logo2.png"></div>
-        <div class="right-but "><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.shao-ming.com/" target="_blank"><img src="images/Shape.png"  alt="分享空间"></a></div>
+        <div class="logo-pic"><a href="index.html" class="logo-index"><img src="images/logo2.png" alt="LOGO"></a></div>
+        <div class="right-but ">
+        <span onClick="toshare()" >
+            <img src="images/Shape.png" alt="分享空间"></span>
+        </div>
     </div>
     <div class="model " id="mymodel">
         <ul class="nav  navbar-nav navbar-right">
@@ -39,7 +40,23 @@
             <li><a href="list-zp.html">诚聘英才</a></li>
         </ul>
     </div>
+<!-- share -->
+<div class="am-share">
+  <h3 class="am-share-title">分享到</h3>
+  <ul class="am-share-sns">
     
+    <li><a href="#" target="_blank" data-cmd="qzone" title="分享到QQ空间"> <i class="share-icon-kongjian"></i> <span>QQ空间</span> </a> </li>
+  
+    <li><a href="#" data-cmd="tsina" title="分享到新浪微博"> <i class="share-icon-weibo"></i> <span>新浪微博</span> </a> </li>
+    <li><a  href="#" target="_blank" data-cmd="renren" title="分享到人人网"> <i class="share-icon-renren"></i> <span>人人网</span> </a> </li>
+    <li><a  href="#" target="_blank"  data-cmd="tsina" title="分享到新浪微博"> <i class="share-icon-tenxun"></i> <span>腾讯微博</span> </a> </li>
+
+
+<div  class="jiathis_style_m"> </div>
+  </ul>
+  <div class="am-share-footer"><button class="share_btn">取消</button></div>
+</div>
+
     <!--E header-->
     <div id="popDiv" class="mydiv" style="display:none;"> <a class="close" href="javascript:closeDiv()">关闭</a> <a class="iosd" style="cursor: default">iphone</a> <a class="andd" href="http://www.queqianme.com/download/queqianme-android.apk">android</a>
         <p>二维码</p>
@@ -130,6 +147,13 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+
+
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
@@ -279,7 +303,7 @@
     </script>
     <script language="javascript">
     $(window).scroll(function() {
-        if ($(document).scrollTop() + $(window).height() >= 2000 && $(document).scrollTop() + $(window).height() < 2400) {
+        if ($(document).scrollTop() + $(window).height() >= 2000 && $(document).scrollTop() + $(window).height() < 2800) {
             $("#phone01").animate({
                 bottom: 0,
                 opacity: 1
@@ -306,7 +330,7 @@
                 }, 500)
             });
         }
-        if ($(document).scrollTop() + $(window).height() >= 3600 && $(document).scrollTop() + $(window).height() < 4200) {
+        if ($(document).scrollTop() + $(window).height() >= 3600) {
             $("#phone02").animate({
                 left: -160,
                 opacity: 1
@@ -333,27 +357,75 @@
     })
 
 
-	var style = false;
+    var style = false;
     var scroll = $(document).scrollTop()
     $(".navbar-toggle").click(function() {
         if (style == false) {
 
             $(".model").css("display", "block");
             $("html,body").scrollTop(0);
-            $(".About_nav").attr("src","images/About_ic.png"); 
-            $("#wapnav").css("border-color","#2D3447");
-            $("#wapnav").css({"background":"none","border":"none"})
+            $(".About_nav").attr("src", "images/About_ic.png");
+            $("#wapnav").css("border-color", "#2D3447");
+            $("#wapnav").css({
+                "background": "none",
+                "border": "none"
+            })
+            
             style = true;
         } else {
             $(".model").css("display", "none");
-            $(".About_nav").attr("src","images/About_ic@2x.png"); 
-           $("#wapnav").css({"background":"#3d4456","border-bottom":"4px solid #8c92a2"})
+            $(".About_nav").attr("src", "images/About_ic@2x.png");
+            $("#wapnav").css({
+                "background": "#3d4456",
+                "border-bottom": "4px solid #8c92a2"
+            });
+                  
             style = false;
         }
     });
     </script>
+    <script type="text/javascript">
+    function toshare(){
+        $(".am-share").addClass("am-modal-active"); 
+        if($(".sharebg").length>0){
+            $(".sharebg").addClass("sharebg-active");
+        }else{
+            $("body").append('<div class="sharebg"></div>');
+            $(".sharebg").addClass("sharebg-active");
+        }
+        $(".sharebg-active,.share_btn").click(function(){
+            $(".am-share").removeClass("am-modal-active");  
+            setTimeout(function(){
+                $(".sharebg-active").removeClass("sharebg-active"); 
+                $(".sharebg").remove(); 
+            },300);
+        })
+    }   
+</script>
 
+
+
+
+<script type="text/javascript" >
+var jiathis_config={
+    url:"http://www.queqianme.com/",
+    summary:"缺钱么是专为年轻人量身定制的互联网信用借款平台，真正实现无抵押，3分钟极速搞定，额度无上限，还款方便快捷。缺钱么官网为您提供缺钱么App官方下载。",
+    title:"缺钱么官网 #缺钱么APP下载#",
+    pic:"http://i4.tietuku.com/9512d6f7ee726e90.png",
+    shortUrl:false,
+    hideMore:false
+}
+</script>
+
+<script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_m.js" charset="utf-8"></script>
+
+<!-- JiaThis Button END -->
     <script src="scripts/sl.js"></script>
 </body>
 
 </html>
+
+
+
+
+
