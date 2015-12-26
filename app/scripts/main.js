@@ -301,9 +301,9 @@ var jiathis_config={
             e = document.getElementById("e" + i);
             if (id != o.id) {
                 j.className = "leoff";
-                e.style.visibility = "hidden";
+                e.style.display = "none";
             } else {
-                e.style.visibility = "visible";
+                e.style.display = "block";
             }
         }
 
