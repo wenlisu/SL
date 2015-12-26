@@ -198,6 +198,7 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
+       <script src="/bower_components/jquery.easing/js/jquery.easing.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js scripts/plugins.js -->
@@ -215,121 +216,15 @@
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
     <!-- endbuild -->
     <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
-    <!-- endbuild -->
-    <script src="scripts/jquery.easing.min.js"></script>
+   
     <script src="scripts/slider.js"></script>
-    <script type="text/javascript">
-    $(function() {
-        var bannerSlider = new Slider($('#banner_tabs'), {
-            time: 5000,
-            delay: 400,
-            event: 'hover',
-            auto: true,
-            mode: 'fade',
-            controller: $('#bannerCtrl'),
-            activeControllerCls: 'active'
-        });
-    })
-    </script>
-    <script language="javascript">
-    $(window).scroll(function() {
+    <script src="scripts/main.js"></script>
+        <script src="scripts/sl.js"></script>
+    <!-- endbuild -->
 
-        if ($(document).scrollTop() + $(window).height() >= 1000) {
-            $(".lr-gotop").show();
-        } else {
-            $(".lr-gotop").hide();
-        }
-
-    })
-
-    var style = false;
-    var scroll = $(document).scrollTop()
-    $(".navbar-toggle").click(function() {
-        if (style == false) {
-
-            $(".model").css("display", "block");
-            $("html,body").scrollTop(0);
-            $(".About_nav").attr("src", "images/About_ic.png");
-            $("#wapnav").css("border-color", "#2D3447");
-            $("#wapnav").css({
-                "background": "none",
-                "border": "none"
-            })
-
-            style = true;
-        } else {
-            $(".model").css("display", "none");
-            $(".About_nav").attr("src", "images/About_ic@2x.png");
-            $("#wapnav").css({
-                "background": "#2d3447",
-                "border-bottom": "4px solid #8c92a2"
-            });
-
-            style = false;
-        }
-    });
-    </script>
-    <script type="text/javascript">
-    function doClick(o) {
-        o.className = "leon";
-        var j;
-        var id;
-        var e;
-        for (var i = 1; i <= 4; i++) {
-            id = "v" + i;
-            j = document.getElementById(id);
-            e = document.getElementById("e" + i);
-            if (id != o.id) {
-                j.className = "leoff";
-                e.style.visibility = "hidden";
-            } else {
-                e.style.visibility = "visible";
-            }
-        }
-
-        var id = o.id + "";
-        var dd = id.substring(1, 2);
-        var curForm = document.getElementById("FormSearch" + dd);
-        var inputv;
-        for (var i = 1; i <= 4; i++) {
-            var otherForm = document.getElementById("FormSearch" + i);
-        }
-
-    }
-    </script>
-    <script type="text/javascript">
-    function toshare() {
-        $(".am-share").addClass("am-modal-active");
-        if ($(".sharebg").length > 0) {
-            $(".sharebg").addClass("sharebg-active");
-        } else {
-            $("body").append('<div class="sharebg"></div>');
-            $(".sharebg").addClass("sharebg-active");
-        }
-        $(".sharebg-active,.share_btn").click(function() {
-            $(".am-share").removeClass("am-modal-active");
-            setTimeout(function() {
-                $(".sharebg-active").removeClass("sharebg-active");
-                $(".sharebg").remove();
-            }, 300);
-        })
-    }
-    </script>
-<script type="text/javascript" >
-var jiathis_config={
-    url:"http://www.queqianme.com/",
-    summary:"缺钱么是专为年轻人量身定制的互联网信用借款平台，真正实现无抵押，3分钟极速搞定，额度无上限，还款方便快捷。缺钱么官网为您提供缺钱么App官方下载。
-",
-    title:"缺钱么官网 #缺钱么APP下载#",
-    pic:"http://i4.tietuku.com/9512d6f7ee726e90.png",
-    shortUrl:false,
-    hideMore:false
-}
-</script>
     <script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_m.js" charset="utf-8"></script>
 
-    <script src="scripts/sl.js"></script>
+
     <!-- endbuild -->
 </body>
 
