@@ -546,87 +546,7 @@ h5 {
 .lr-book .lricon {
     background-position: 0px 0px;
 }
-.mydiv {
-    background: url(../images/popup.png) no-repeat;
-    text-align: center;
-    line-height: 40px;
-    font-size: 12px;
-    font-weight: bold;
-    z-index: 999;
-    width: 473px;
-    height: 240px;
-    left: 50%;
-    top: 50%;
-    position: relative;
-    margin-left: -237px!important;
-    /*FF IE7 该值为本身宽的一半 */
-    margin-top: -120px!important;
-    /*FF IE7 该值为本身高的一半*/
-    margin-top: 0px;
-    position: fixed!important;
-    /* FF IE7*/
-    position: absolute;
-    /*IE6*/
-    _top: expression(eval(document.compatMode && document.compatMode=='CSS1Compat') ? documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2: /*IE6*/
-    document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);
-    /*IE5 IE5.5*/
-}
 
-.mydiv a.close {
-    position: absolute;
-    overflow: hidden;
-    text-indent: -9999px;
-    top: 12px;
-    right: 12px;
-    width: 16px;
-    height: 16px;
-    background: transparent url(../images/close.png) no-repeat 0 0
-}
-
-.mydiv a.close:hover {
-    opacity: 0.5
-}
-
-.mydiv a.iosd {
-    position: absolute;
-    overflow: hidden;
-    text-indent: -9999px;
-    top: 84px;
-    left: 44px;
-    width: 164px;
-    height: 46px;
-    background: transparent url(../images/btn04-2.png) no-repeat 0 0
-}
-
-.mydiv a.iosd:hover {
-    background-position: 0 -48px;
-}
-
-.mydiv a.andd {
-    position: absolute;
-    overflow: hidden;
-    text-indent: -9999px;
-    top: 150px;
-    left: 44px;
-    width: 164px;
-    height: 46px;
-    background: transparent url(../images/btn03.png) no-repeat 0 0
-}
-
-.mydiv a.andd:hover {
-    background-position: 0 -48px;
-}
-
-.mydiv p {
-    position: absolute;
-    overflow: hidden;
-    text-indent: -9999px;
-    top: 92px;
-    right: 67px;
-    width: 96px;
-    height: 96px;
-    background: transparent url(../images/qrcode.png) no-repeat 0 0
-}
 
 .bg,
 .popIframe {
@@ -2072,14 +1992,14 @@ html,body{
 }
 
 .mydiv {
-  background: url(../images/popup.png) no-repeat;
+  background: url(../images/er_bg.png) no-repeat;
   text-align: center;
   line-height: 40px;
   font-size: 12px;
   font-weight: bold;
   z-index: 999;
-  width: 473px;
-  height: 240px;
+  width: 402px;
+  height: 248px;
   left: 50%;
   top: 50%;
   position: relative;
@@ -2112,26 +2032,29 @@ html,body{
       position: absolute;
       overflow: hidden;
       text-indent: -9999px;
-      top: 84px;
-      left: 44px;
-      width: 164px;
-      height: 46px;
+      bottom: 25px;
+      left: 62px;
+      width: 124px;
+      height: 35px;
       background: transparent url(../images/btn04-2.png) no-repeat 0 0;
+      background-size:124px 70px;
       &:hover {
-        background-position: 0 -48px;
+        background-position: 0 -35px;
       }
     }
     &.andd {
       position: absolute;
       overflow: hidden;
       text-indent: -9999px;
-      top: 150px;
-      left: 44px;
-      width: 164px;
-      height: 46px;
+      bottom: 25px;
+      left: auto;
+      right:62px;
+      width: 124px;
+      height: 35px;
       background: transparent url(../images/btn03.png) no-repeat 0 0;
+      background-size:124px 70px;
       &:hover {
-        background-position: 0 -48px;
+        background-position: 0 -36px;
       }
     }
   }
@@ -2139,14 +2062,45 @@ html,body{
     position: absolute;
     overflow: hidden;
     text-indent: -9999px;
-    top: 92px;
-    right: 67px;
-    width: 96px;
-    height: 96px;
-    background: transparent url(../images/qrcode.png) no-repeat 0 0;
+    width: 80px;
+    height: 80px;
+    margin:10px;
+    background: transparent url(../images/1618305357.png) no-repeat 0 0;
+    background-size:100% 100% ;
   }
 }
-
+.ios_bg{
+    width: 102px;
+    height: 102px;
+    background:#fff;
+        border:1px solid #ff8500;
+    border-radius:9px;
+    position: absolute;
+    left:75px;
+        top: 66px;
+}
+.and{
+    background-image:url(../images/qrcode.png) !important ;
+}
+.and_bg{
+        width: 102px;
+    height: 102px;
+    position: absolute;
+    left:auto;
+    right:75px;
+            top: 66px;
+            border:1px solid #ff8500;
+    border-radius:9px;
+}
+.sm{
+    font-size: 20px;
+    color:#333;
+    position: absolute;
+    top:16px;
+    font-weight:normal;
+    left:50%;
+    margin-left:-70px;
+}
 .bg {
   background-color: #000;
   display: none;
