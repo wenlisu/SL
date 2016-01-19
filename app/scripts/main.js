@@ -286,7 +286,7 @@ var jiathis_config={
                 $(".sharebg-active").removeClass("sharebg-active");
                 $(".sharebg").remove();
             }, 300);
-        })
+        });
     }
 
 
