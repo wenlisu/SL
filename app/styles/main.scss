@@ -1945,169 +1945,257 @@ body {
     }
 }
 
+// .mydiv {
+//     background: url(../images/er_bg.png) no-repeat;
+//     text-align: center;
+//     line-height: 40px;
+//     font-size: 12px;
+//     font-weight: bold;
+//     z-index: 999;
+//     width: 402px;
+//     height: 248px;
+//     left: 50%;
+//     top: 50%;
+//     position: relative;
+//     margin-left: -237px !important;
+//     /*FF IE7 该值为本身宽的一半 */
+//     margin-top: -120px !important;
+//     /*FF IE7 该值为本身高的一半*/
+//     margin-top: 0px;
+//     position: fixed !important;
+//     /* FF IE7*/
+//     position: absolute;
+//     /*IE6*/
+//     _top: expression(eval(document.compatMode && document.compatMode=='CSS1Compat') ? documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2: /*IE6*/
+//     document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);
+//     /*IE5 IE5.5*/
+//     a {
+//         &.close {
+//             position: absolute;
+//             overflow: hidden;
+//             text-indent: -9999px;
+//             top: 12px;
+//             right: 12px;
+//             width: 16px;
+//             height: 16px;
+//             background: transparent url(../images/close.png) no-repeat 0 0;
+//             &:hover {
+//                 opacity: 0.5;
+//             }
+//         }
+//         &.iosd {
+//             position: absolute;
+//             overflow: hidden;
+//             text-indent: -9999px;
+//             bottom: 25px;
+//             left: 62px;
+//             width: 124px;
+//             height: 35px;
+//             background: transparent url(../images/btn04.png) no-repeat 0 0;
+//             background-size: 124px 70px;
+//             &:hover {
+//                 background-position: 0 -36px;
+//             }
+//         }
+//         &.andd {
+//             position: absolute;
+//             overflow: hidden;
+//             text-indent: -9999px;
+//             bottom: 25px;
+//             left: auto;
+//             right: 62px;
+//             width: 124px;
+//             height: 35px;
+//             background: transparent url(../images/btn03.png) no-repeat 0 0;
+//             background-size: 124px 70px;
+//             &:hover {
+//                 background-position: 0 -36px;
+//             }
+//         }
+//     }
+//     p {
+//         position: absolute;
+//         overflow: hidden;
+//         text-indent: -9999px;
+//         width: 80px;
+//         height: 80px;
+//         margin: 10px;
+//         background: transparent url(../images/1618305357.png) no-repeat 0 0;
+//         background-size: 100% 100%;
+//     }
+// }
 .mydiv {
-    background: url(../images/er_bg.png) no-repeat;
+    background: url(../images/popup.png) no-repeat;
     text-align: center;
     line-height: 40px;
     font-size: 12px;
     font-weight: bold;
     z-index: 999;
-    width: 402px;
-    height: 248px;
+    width: 473px;
+    height: 240px;
     left: 50%;
     top: 50%;
     position: relative;
-    margin-left: -237px !important;
-    /*FF IE7 该值为本身宽的一半 */
-    margin-top: -120px !important;
-    /*FF IE7 该值为本身高的一半*/
+    margin-left: -237px!important;/*FF IE7 该值为本身宽的一半 */
+    margin-top: -120px!important;/*FF IE7 该值为本身高的一半*/
     margin-top: 0px;
-    position: fixed !important;
-    /* FF IE7*/
+    position: fixed!important;/* FF IE7*/
+    position: absolute;/*IE6*/
+_top:       expression(eval(document.compatMode &&  document.compatMode=='CSS1Compat') ?  documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :/*IE6*/
+ document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*IE5 IE5.5*/
+}
+.mydiv a.close {
     position: absolute;
-    /*IE6*/
-    _top: expression(eval(document.compatMode && document.compatMode=='CSS1Compat') ? documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2: /*IE6*/
-    document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);
-    /*IE5 IE5.5*/
-    a {
-        &.close {
-            position: absolute;
-            overflow: hidden;
-            text-indent: -9999px;
-            top: 12px;
-            right: 12px;
-            width: 16px;
-            height: 16px;
-            background: transparent url(../images/close.png) no-repeat 0 0;
-            &:hover {
-                opacity: 0.5;
-            }
-        }
-        &.iosd {
-            position: absolute;
-            overflow: hidden;
-            text-indent: -9999px;
-            bottom: 25px;
-            left: 62px;
-            width: 124px;
-            height: 35px;
-            background: transparent url(../images/btn04.png) no-repeat 0 0;
-            background-size: 124px 70px;
-            &:hover {
-                background-position: 0 -36px;
-            }
-        }
-        &.andd {
-            position: absolute;
-            overflow: hidden;
-            text-indent: -9999px;
-            bottom: 25px;
-            left: auto;
-            right: 62px;
-            width: 124px;
-            height: 35px;
-            background: transparent url(../images/btn03.png) no-repeat 0 0;
-            background-size: 124px 70px;
-            &:hover {
-                background-position: 0 -36px;
-            }
-        }
-    }
-    p {
-        position: absolute;
-        overflow: hidden;
-        text-indent: -9999px;
-        width: 80px;
-        height: 80px;
-        margin: 10px;
-        background: transparent url(../images/1618305357.png) no-repeat 0 0;
-        background-size: 100% 100%;
-    }
+    overflow: hidden;
+    text-indent: -9999px;
+    top: 12px;
+    right: 12px;
+    width: 16px;
+    height: 16px;
+    background: transparent url(../images/close.png) no-repeat 0 0;
 }
-
-.ios_bg {
-    width: 102px;
-    height: 102px;
-    background: #fff;
-    border: 1px solid #ff8500;
-    border-radius: 9px;
+.mydiv a.close:hover {
+    opacity: 0.5
+}
+.mydiv a.iosd {
     position: absolute;
-    left: 75px;
-    top: 66px;
+    overflow: hidden;
+    text-indent: -9999px;
+    top: 84px;
+    left: 44px;
+    width: 164px;
+    height: 46px;
+    background: transparent url(../images/btn04.png) no-repeat 0 0;
 }
-
-.and {
-    background-image: url(../images/qrcode.png) !important;
+.mydiv a.iosd:hover {
+    background-position: 0 -48px;
 }
-
-.and_bg {
-    width: 102px;
-    height: 102px;
+.mydiv a.andd {
     position: absolute;
-    left: auto;
-    right: 75px;
-    top: 66px;
-    border: 1px solid #ff8500;
-    border-radius: 9px;
+    overflow: hidden;
+    text-indent: -9999px;
+    top: 150px;
+    left: 44px;
+    width: 164px;
+    height: 46px;
+    background: transparent url(../images/btn03.png) no-repeat 0 0
 }
-
-.sm {
-    font-size: 20px;
-    color: #333;
+.mydiv a.andd:hover {
+    background-position: 0 -48px;
+}
+.mydiv p {
     position: absolute;
-    top: 16px;
-    font-weight: normal;
-    left: 50%;
-    margin-left: -70px;
+    overflow: hidden;
+    text-indent: -9999px;
+    top: 92px;
+    right: 67px;
+    width: 96px;
+    height: 96px;
+    background: transparent url(../images/qrcode.png) no-repeat 0 0;
+    background-size:100% 100%;
 }
-
-.bg {
+.bg, .popIframe {
     background-color: #000;
     display: none;
     width: 100%;
     height: 100%;
     left: 0;
-    top: 0;
-    /*FF IE7*/
-    filter: alpha(opacity=50);
-    /*IE*/
-    opacity: 0.5;
-    /*FF*/
+    top: 0;/*FF IE7*/
+    filter: alpha(opacity=50);/*IE*/
+    opacity: 0.5;/*FF*/
     z-index: 1;
-    position: fixed !important;
-    /*FF IE7*/
-    position: absolute;
-    /*IE6*/
-    _top: expression(eval(document.compatMode && document.compatMode=='CSS1Compat') ? documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2: /*IE6*/
-    document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);
-    /* www.codefans.net IE5 IE5.5*/
+    position: fixed!important;/*FF IE7*/
+    position: absolute;/*IE6*/
+_top:       expression(eval(document.compatMode &&  document.compatMode=='CSS1Compat') ?  documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :/*IE6*/
+ document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/* www.codefans.net IE5 IE5.5*/
 }
-
 .popIframe {
-    background-color: #000;
-    display: none;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    /*FF IE7*/
-    filter: alpha(opacity=50);
-    /*IE*/
-    opacity: 0.5;
-    /*FF*/
-    z-index: 1;
-    position: fixed !important;
-    /*FF IE7*/
-    position: absolute;
-    /*IE6*/
-    _top: expression(eval(document.compatMode && document.compatMode=='CSS1Compat') ? documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2: /*IE6*/
-    document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);
-    /* www.codefans.net IE5 IE5.5*/
-    filter: alpha(opacity=0);
-    /*IE*/
-    opacity: 0;
-    /*FF*/
+    filter: alpha(opacity=0);/*IE*/
+    opacity: 0;/*FF*/
 }
+// .ios_bg {
+//     width: 102px;
+//     height: 102px;
+//     background: #fff;
+//     border: 1px solid #ff8500;
+//     border-radius: 9px;
+//     position: absolute;
+//     left: 75px;
+//     top: 66px;
+// }
+
+// .and {
+//     background-image: url(../images/qrcode.png) !important;
+// }
+
+// .and_bg {
+//     width: 102px;
+//     height: 102px;
+//     position: absolute;
+//     left: auto;
+//     right: 75px;
+//     top: 66px;
+//     border: 1px solid #ff8500;
+//     border-radius: 9px;
+// }
+
+// .sm {
+//     font-size: 20px;
+//     color: #333;
+//     position: absolute;
+//     top: 16px;
+//     font-weight: normal;
+//     left: 50%;
+//     margin-left: -70px;
+// }
+
+// .bg {
+//     background-color: #000;
+//     display: none;
+//     width: 100%;
+//     height: 100%;
+//     left: 0;
+//     top: 0;
+//     /*FF IE7*/
+//     filter: alpha(opacity=50);
+//     /*IE*/
+//     opacity: 0.5;
+//     /*FF*/
+//     z-index: 1;
+//     position: fixed !important;
+//     /*FF IE7*/
+//     position: absolute;
+//     /*IE6*/
+//     _top: expression(eval(document.compatMode && document.compatMode=='CSS1Compat') ? documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2: /*IE6*/
+//     document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);
+//     /* www.codefans.net IE5 IE5.5*/
+// }
+
+// .popIframe {
+//     background-color: #000;
+//     display: none;
+//     width: 100%;
+//     height: 100%;
+//     left: 0;
+//     top: 0;
+//     /*FF IE7*/
+//     filter: alpha(opacity=50);
+//     /*IE*/
+//     opacity: 0.5;
+//     /*FF*/
+//     z-index: 1;
+//     position: fixed !important;
+//     /*FF IE7*/
+//     position: absolute;
+//     /*IE6*/
+//     _top: expression(eval(document.compatMode && document.compatMode=='CSS1Compat') ? documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2: /*IE6*/
+//     document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);
+//     /* www.codefans.net IE5 IE5.5*/
+//     filter: alpha(opacity=0);
+//     /*IE*/
+//     opacity: 0;
+//     /*FF*/
+// }
 
 .flex-control-nav {
     width: 100%;
