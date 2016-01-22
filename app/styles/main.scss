@@ -1465,7 +1465,7 @@ body {
     width: 100%;
     height: 100%;
     position: fixed;
-    top:0px;
+    top: 0px;
     ul {
         margin: 0 15px;
         li {
@@ -1629,6 +1629,7 @@ body {
         line-height: 80;
         font-size: 30px;
         letter-spacing: 15px;
+        margin-top: 24px;
         &:link,
         &:visited {
             color: #fff;
@@ -1795,6 +1796,7 @@ body {
     overflow: hidden;
     text-indent: -9999px;
     background: transparent url(../images/txt05.png) no-repeat 0 0;
+    background-size: auto 100%;
 }
 
 .txtdown-show a {
@@ -2036,14 +2038,20 @@ body {
     left: 50%;
     top: 50%;
     position: relative;
-    margin-left: -237px!important;/*FF IE7 该值为本身宽的一半 */
-    margin-top: -120px!important;/*FF IE7 该值为本身高的一半*/
+    margin-left: -237px!important;
+    /*FF IE7 该值为本身宽的一半 */
+    margin-top: -120px!important;
+    /*FF IE7 该值为本身高的一半*/
     margin-top: 0px;
-    position: fixed!important;/* FF IE7*/
-    position: absolute;/*IE6*/
-_top:       expression(eval(document.compatMode &&  document.compatMode=='CSS1Compat') ?  documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :/*IE6*/
- document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*IE5 IE5.5*/
+    position: fixed!important;
+    /* FF IE7*/
+    position: absolute;
+    /*IE6*/
+    _top: expression(eval(document.compatMode && document.compatMode=='CSS1Compat') ? documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2: /*IE6*/
+    document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);
+    /*IE5 IE5.5*/
 }
+
 .mydiv a.close {
     position: absolute;
     overflow: hidden;
@@ -2054,9 +2062,11 @@ _top:       expression(eval(document.compatMode &&  document.compatMode=='CSS1Co
     height: 16px;
     background: transparent url(../images/close.png) no-repeat 0 0;
 }
+
 .mydiv a.close:hover {
     opacity: 0.5
 }
+
 .mydiv a.iosd {
     position: absolute;
     overflow: hidden;
@@ -2067,9 +2077,11 @@ _top:       expression(eval(document.compatMode &&  document.compatMode=='CSS1Co
     height: 46px;
     background: transparent url(../images/btn04.png) no-repeat 0 0;
 }
+
 .mydiv a.iosd:hover {
     background-position: 0 -48px;
 }
+
 .mydiv a.andd {
     position: absolute;
     overflow: hidden;
@@ -2080,9 +2092,11 @@ _top:       expression(eval(document.compatMode &&  document.compatMode=='CSS1Co
     height: 46px;
     background: transparent url(../images/btn03.png) no-repeat 0 0
 }
+
 .mydiv a.andd:hover {
     background-position: 0 -48px;
 }
+
 .mydiv p {
     position: absolute;
     overflow: hidden;
@@ -2092,27 +2106,39 @@ _top:       expression(eval(document.compatMode &&  document.compatMode=='CSS1Co
     width: 96px;
     height: 96px;
     background: transparent url(../images/qrcode.png) no-repeat 0 0;
-    background-size:100% 100%;
+    background-size: 100% 100%;
 }
-.bg, .popIframe {
+
+.bg,
+.popIframe {
     background-color: #000;
     display: none;
     width: 100%;
     height: 100%;
     left: 0;
-    top: 0;/*FF IE7*/
-    filter: alpha(opacity=50);/*IE*/
-    opacity: 0.5;/*FF*/
+    top: 0;
+    /*FF IE7*/
+    filter: alpha(opacity=50);
+    /*IE*/
+    opacity: 0.5;
+    /*FF*/
     z-index: 1;
-    position: fixed!important;/*FF IE7*/
-    position: absolute;/*IE6*/
-_top:       expression(eval(document.compatMode &&  document.compatMode=='CSS1Compat') ?  documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :/*IE6*/
- document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/* www.codefans.net IE5 IE5.5*/
+    position: fixed!important;
+    /*FF IE7*/
+    position: absolute;
+    /*IE6*/
+    _top: expression(eval(document.compatMode && document.compatMode=='CSS1Compat') ? documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2: /*IE6*/
+    document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);
+    /* www.codefans.net IE5 IE5.5*/
 }
+
 .popIframe {
-    filter: alpha(opacity=0);/*IE*/
-    opacity: 0;/*FF*/
+    filter: alpha(opacity=0);
+    /*IE*/
+    opacity: 0;
+    /*FF*/
 }
+
 // .ios_bg {
 //     width: 102px;
 //     height: 102px;
@@ -2123,11 +2149,9 @@ _top:       expression(eval(document.compatMode &&  document.compatMode=='CSS1Co
 //     left: 75px;
 //     top: 66px;
 // }
-
 // .and {
 //     background-image: url(../images/qrcode.png) !important;
 // }
-
 // .and_bg {
 //     width: 102px;
 //     height: 102px;
@@ -2138,7 +2162,6 @@ _top:       expression(eval(document.compatMode &&  document.compatMode=='CSS1Co
 //     border: 1px solid #ff8500;
 //     border-radius: 9px;
 // }
-
 // .sm {
 //     font-size: 20px;
 //     color: #333;
@@ -2148,7 +2171,6 @@ _top:       expression(eval(document.compatMode &&  document.compatMode=='CSS1Co
 //     left: 50%;
 //     margin-left: -70px;
 // }
-
 // .bg {
 //     background-color: #000;
 //     display: none;
@@ -2170,7 +2192,6 @@ _top:       expression(eval(document.compatMode &&  document.compatMode=='CSS1Co
 //     document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);
 //     /* www.codefans.net IE5 IE5.5*/
 // }
-
 // .popIframe {
 //     background-color: #000;
 //     display: none;
@@ -2196,7 +2217,6 @@ _top:       expression(eval(document.compatMode &&  document.compatMode=='CSS1Co
 //     opacity: 0;
 //     /*FF*/
 // }
-
 .flex-control-nav {
     width: 100%;
     position: absolute;
@@ -2252,21 +2272,19 @@ _top:       expression(eval(document.compatMode &&  document.compatMode=='CSS1Co
 //   height: 100px;
 // }
 @media screen and (max-width: 980px) {
-    .cnzz{
+    .cnzz {
         display: none;
     }
     // html {
     //     overflow-x: hidden;
     //     overflow-y: scroll;
     //     position:relative;
-
     // }
     body {
         -ms-overflow-style: none;
         overflow: -moz-scrollbars-none;
         overflow-x: hidden;
         overflow-y: scroll;
-
     }
     html::-webkit-scrollbar {
         width: 0px;
@@ -2274,7 +2292,6 @@ _top:       expression(eval(document.compatMode &&  document.compatMode=='CSS1Co
     .cod-mark {
         display: none !important;
     }
-
     .crossbanenr-show li.pcqqbg {
         background: url(../images/bg1.png) no-repeat left top;
     }
@@ -2286,7 +2303,6 @@ _top:       expression(eval(document.compatMode &&  document.compatMode=='CSS1Co
     }
     .content-show h1 {
         background-size: 175% 100%;
-      
     }
     .am-share-show {
         display: block;
@@ -2569,35 +2585,6 @@ _top:       expression(eval(document.compatMode &&  document.compatMode=='CSS1Co
             background-size: 100% 100%;
         }
     }
-    .cod-mark {
-        position: absolute;
-        left: 50%;
-        margin-left: -131px;
-    }
-    span.marking {
-        width: 134px;
-        height: 50px;
-        display: inline-block;
-        background: url(http://v.trustutn.org/images/cert/bottom_large_img.png) no-repeat;
-        background-size: 100% 100%;
-        a {
-            width: 100%;
-            height: 100%;
-            display: block;
-        }
-    }
-    span.markingTow {
-        width: 127px;
-        height: 47px;
-        display: inline-block;
-        background: url(http://img.webscan.360.cn/status/pai/hash/d3cc5bd03e146e2a3ea2d4ee69372bf3) no-repeat;
-        background-size: 100% 100%;
-        a {
-            width: 100%;
-            height: 100%;
-            display: block;
-        }
-    }
 }
 
 // @media screen and (min-width:990px) {
@@ -2650,9 +2637,10 @@ span.marking {
     display: inline-block;
     background: url(http://v.trustutn.org/images/cert/bottom_large_img.png) no-repeat;
     background-size: 100% 100%;
+    vertical-align: middle;
     a {
-        width: 100%;
-        height: 100%;
+        width: 134px;
+        height: 50px;
         display: block;
     }
 }
@@ -2663,9 +2651,10 @@ span.markingTow {
     display: inline-block;
     background: url(http://img.webscan.360.cn/status/pai/hash/d3cc5bd03e146e2a3ea2d4ee69372bf3) no-repeat;
     background-size: 100% 100%;
+    vertical-align: middle;
     a {
-        width: 100%;
-        height: 100%;
+        width: 127px;
+        height: 47px;
         display: block;
     }
 }
