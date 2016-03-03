@@ -205,7 +205,7 @@ h5 {
 .topNav li a {
     float: left;
     padding: 0 20px;
-    line-height: 87px;
+    line-height: 86px;
     font-size: 1.125em;
     width: 160px;
     text-align: center
@@ -1024,7 +1024,7 @@ h6 {
         width: 100%;
         height: 70px;
         background: url(../images/footer.png) no-repeat center top;
-        background-size: auto 96%;
+        background-size: auto 110%;
     }
     .newfoot-show {
         width: 1141px !important;
@@ -1423,7 +1423,7 @@ body {
         a {
             float: left;
             padding: 0 20px;
-            line-height: 87px;
+            line-height: 86px;
             font-size: 1.125em;
             width: 160px;
             text-align: center;
@@ -1947,85 +1947,7 @@ body {
     }
 }
 
-// .mydiv {
-//     background: url(../images/er_bg.png) no-repeat;
-//     text-align: center;
-//     line-height: 40px;
-//     font-size: 12px;
-//     font-weight: bold;
-//     z-index: 999;
-//     width: 402px;
-//     height: 248px;
-//     left: 50%;
-//     top: 50%;
-//     position: relative;
-//     margin-left: -237px !important;
-//     /*FF IE7 该值为本身宽的一半 */
-//     margin-top: -120px !important;
-//     /*FF IE7 该值为本身高的一半*/
-//     margin-top: 0px;
-//     position: fixed !important;
-//     /* FF IE7*/
-//     position: absolute;
-//     /*IE6*/
-//     _top: expression(eval(document.compatMode && document.compatMode=='CSS1Compat') ? documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2: /*IE6*/
-//     document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);
-//     /*IE5 IE5.5*/
-//     a {
-//         &.close {
-//             position: absolute;
-//             overflow: hidden;
-//             text-indent: -9999px;
-//             top: 12px;
-//             right: 12px;
-//             width: 16px;
-//             height: 16px;
-//             background: transparent url(../images/close.png) no-repeat 0 0;
-//             &:hover {
-//                 opacity: 0.5;
-//             }
-//         }
-//         &.iosd {
-//             position: absolute;
-//             overflow: hidden;
-//             text-indent: -9999px;
-//             bottom: 25px;
-//             left: 62px;
-//             width: 124px;
-//             height: 35px;
-//             background: transparent url(../images/btn04.png) no-repeat 0 0;
-//             background-size: 124px 70px;
-//             &:hover {
-//                 background-position: 0 -36px;
-//             }
-//         }
-//         &.andd {
-//             position: absolute;
-//             overflow: hidden;
-//             text-indent: -9999px;
-//             bottom: 25px;
-//             left: auto;
-//             right: 62px;
-//             width: 124px;
-//             height: 35px;
-//             background: transparent url(../images/btn03.png) no-repeat 0 0;
-//             background-size: 124px 70px;
-//             &:hover {
-//                 background-position: 0 -36px;
-//             }
-//         }
-//     }
-//     p {
-//         position: absolute;
-//         overflow: hidden;
-//         text-indent: -9999px;
-//         width: 80px;
-//         height: 80px;
-//         margin: 10px;
-//         background: transparent url(../images/1618305357.png) no-repeat 0 0;
-//         background-size: 100% 100%;
-//     }
-// }
+
 .mydiv {
     background: url(../images/popup.png) no-repeat;
     text-align: center;
@@ -2218,7 +2140,7 @@ body {
 //     /*FF*/
 // }
 .flex-control-nav {
-    width: 100%;
+    width: 116%;
     position: absolute;
     bottom: 100px;
     text-align: center;
@@ -2261,6 +2183,7 @@ body {
         overflow: hidden;
     }
     .flex-control-nav {
+        width: 100%;
         bottom: 200px;
     }
     .am-share-show {
@@ -2289,14 +2212,19 @@ body {
     html::-webkit-scrollbar {
         width: 0px;
     }
-    .cod-mark {
-        display: none !important;
+
+    .code{
+        width: 115%;
+        .friendlyT{
+            padding-right:19px !important;
+        }
     }
+
     .crossbanenr-show li.pcqqbg {
         background: url(../images/bg1.png) no-repeat left top;
     }
     .flex-control-nav {
-        width: 100%;
+        width: 116%;
     }
     .lr-tool-rb {
         display: none;
@@ -2656,5 +2584,51 @@ span.markingTow {
         width: 127px;
         height: 47px;
         display: block;
+    }
+}
+
+// cnzz
+#cnzz_stat_icon_1256827337 {
+    img {
+        width: 10px;
+    }
+}
+
+.FriendlyLink {
+    // table {
+    //     margin: 100px 0px;
+    //     tbody>tr {
+    //         >td {
+    //             border: none !important;
+    //             vertical-align: middle !important;
+    //             // border:1px solid #ddd;
+    //             img {
+    //                 vertical-align: middle;
+    //                 // position: absolute;
+    //                 // left:50%;
+    //                 // margin-left:-66px;
+    //             }
+    //         }
+    //     }
+    // }
+    width: 100%;
+    margin: 80px 0px;
+    ul {
+        // width: 100%;
+        li {
+            display: inline-block;
+            width: 22%;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            float: left;
+            .item {
+                border: 1px solid #ddd;
+                img {
+                    width: 100%;
+                    height: auto;
+                    padding: 10px;
+                }
+            }
+        }
     }
 }
