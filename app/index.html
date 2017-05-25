@@ -1,51 +1,62 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>index</title>
-  <link rel="stylesheet" href="../res/css/layui.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>index</title>
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="./styles/index.css">
+    <!-- endbuild -->
 </head>
+
 <body>
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header header header-demo">
+            <div class="layui-main">
+                <a class="logo" href="/">
+                    <img src="./images/logo.png" alt="layui">
+                </a>
+            </div>
+        </div>
+        <div class="layui-side layui-bg-black">
+            <ul class="layui-nav layui-nav-tree site-demo-nav" lay-filter="test">
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a href="javascript:;"><i class="iconfont icon-yunyingshujuzhongduan" ></i>运营数据监测</a>
+                    <dl class="layui-nav-child">
+                        <dd>
+                            <a href="javascript:;">运营每时粒度监控</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;">运营基础数据</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href=""><i class="iconfont icon-hangdongrizhi"></i>后台log日志</a></li>
+                <li class="layui-nav-item"><a href=""><i class="iconfont icon-gongju"></i>运维工具</a></li>
+                <li class="layui-nav-item"><a href=""><i class="iconfont icon-jiankongfuwu"></i>机房服务器监控</a></li>
+                <li class="layui-nav-item"><a href=""><i class="iconfont icon-12-01"></i>系统管理</a></li>
+            </ul>
+        </div>
+        <div class="layui-footer footer footer-demo">
+            <div class="layui-main">
+                <p>Copyright©2015 广东缺钱么网络科技有限公司</p>
+            </div>
+        </div>
+    </div>
+     <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/jquery.easing/js/jquery.easing.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/compent/index.js"></script>
+    <!-- endbuild -->
+    <script src="http://res.layui.com/layui/build/layui.js" charset="utf-8"></script>
+    <script>
 
-<div class="layui-nav navigation">
-  <div class="layui-main">
-    <a class="logo" href="/">
-    </a>
-  </div>
-</div>
-
-<ul class="layui-nav layui-nav-tree layui-nav-side" lay-filter="test" style="top:60px;">
-  <li class="layui-nav-item layui-nav-itemed">
-    <a href="javascript:;">默认展开</a>
-    <dl class="layui-nav-child">
-      <dd><a href="javascript:;">xxx</a></dd>
-      <dd><a href="javascript:;">选项二</a></dd>
-      <dd><a href="javascript:;">选项三</a></dd>
-      <dd><a href="">跳转项</a></dd>
-    </dl>
-  </li>
-  <li class="layui-nav-item">
-    <a href="javascript:;">解决方案</a>
-    <dl class="layui-nav-child">
-      <dd><a href="">移动模块</a></dd>
-      <dd><a href="">后台模版</a></dd>
-      <dd><a href="">电商平台</a></dd>
-    </dl>
-  </li>
-  <li class="layui-nav-item"><a href="">云市场</a></li>
-  <li class="layui-nav-item"><a href="">社区</a></li>
-</ul>
- 
-<!-- 你的HTML代码 -->
- 
-<script src="../res/layui.js"></script>
-<script>
-layui.config({
-  base: '../res/lay/modules/' //你的模块目录（存放模块JS文件的位置）
-}).use('index'); //加载入口，index即为/res/js/modules/下的index.js 文件
-</script>
-
-  
+    </script>
 </body>
+
 </html>
