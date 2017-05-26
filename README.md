@@ -6,6 +6,11 @@
 $ npm install
 ```
 
+If you do not have `gulp` installed, please perform the following steps.
+
+```
+$ npm install gulp -g
+```
 
 ### server
 
