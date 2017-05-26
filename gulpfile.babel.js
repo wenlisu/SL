@@ -10,7 +10,7 @@ const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
 gulp.task('styles', () => {
-    return gulp.src('app/styles/*.scss')
+    return gulp.src('app/styles/**/*.scss')
         .pipe($.plumber())
         .pipe($.sourcemaps.init())
         .pipe($.sass.sync({
@@ -23,13 +23,17 @@ gulp.task('styles', () => {
         .pipe(gulp.dest('.tmp/styles'))
         .pipe(reload({ stream: true }));
 });
-
+gulp.task('minifycss', () => {
+    return gulp.src('app/scripts/**/*.css')
+        .pipe(gulp.dest('dist/scripts'));
+});
+gulp.task('minifyjs', function() {
+    return gulp.src('app/scripts/**/*.js')
+        .pipe(gulp.dest('dist/scripts'));  
+});
 function lint(files, options) {
     return () => {
         return gulp.src(files)
-            .pipe($.babel({
-                presets: ['es2015']
-            }))
             .pipe(reload({ stream: true, once: true }))
             .pipe($.eslint(options))
             .pipe($.eslint.format())
@@ -41,18 +45,8 @@ const testLintOptions = {
         mocha: true
     }
 };
-/* es6 */
-gulp.task('es6', function() {
 
-    return gulp.src('app/scripts/**/*.js')
-        .pipe($.plumber())
-        .pipe($.babel({
-            presets: ['es2015']
-        }))
-        .pipe(gulp.dest('dist/scripts/'));
-});
-
-gulp.task('lint', lint('app/scripts/**/**/*.js'));
+gulp.task('lint', lint('app/scripts/**/*.js'));
 gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
 gulp.task('html', ['styles'], () => {
@@ -60,8 +54,8 @@ gulp.task('html', ['styles'], () => {
 
     return gulp.src('app/*.html')
         .pipe(assets)
-        // .pipe($.if('*.js', $.uglify()))
-        // .pipe($.if('*.css', $.minifyCss({compatibility: '*'})))
+        .pipe($.if('*.js', $.uglify()))
+        .pipe($.if('*.css', $.minifyCss()))
         .pipe(assets.restore())
         .pipe($.useref())
         .pipe($.if('*.html', $.minifyHtml({ conditionals: true, loose: true })))
@@ -117,14 +111,11 @@ gulp.task('serve', ['styles', 'fonts'], () => {
 
     gulp.watch([
         'app/*.html',
-        'app/scripts/*.js',
         'app/scripts/**/*.js',
         'app/images/**/*',
         '.tmp/fonts/**/*'
     ]).on('change', reload);
 
-    gulp.watch('app/scripts/**/*.js', ['es6']);
-    gulp.watch('app/scripts/*.js', ['es6']);
     gulp.watch('app/styles/**/*.scss', ['styles']);
     gulp.watch('app/fonts/**/*', ['fonts']);
     gulp.watch('bower.json', ['wiredep', 'fonts']);
@@ -173,7 +164,7 @@ gulp.task('wiredep', () => {
         .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['html', 'images', 'fonts', 'extras', 'minifycss', 'minifyjs'], () => {
     return gulp.src('dist/**/*').pipe($.size({ title: 'build', gzip: true }));
 });
 
