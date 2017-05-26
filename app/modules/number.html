@@ -1,0 +1,36 @@
+<table class="layui-table">
+  <colgroup>
+    <col width="150">
+    <col width="200">
+    <col>
+  </colgroup>
+  <thead>
+    <tr>
+      <th>phone</th>
+      <th>userId</th>
+      <th>token</th>
+    </tr> 
+  </thead>
+  <tbody>
+    <tr>
+      <td>贤心</td>
+      <td>2016-11-29</td>
+      <td>人生就像是一场修行</td>
+    </tr>
+  </tbody>
+</table>
+
+<script>
+  layui.use([ '_fetch', '_config', 'jquery'], function(exports) {
+    var api = layui._config.api,_fetch = layui._fetch,$=layui.jquery;
+    _fetch(api + 'user/login', {
+        "phone": "15298765432",
+        "password": "123456"
+    }).then(function(data) {
+        console.log("data", data);
+    }, function(err) {
+        console.log("err", err);
+    });
+
+});
+</script>
