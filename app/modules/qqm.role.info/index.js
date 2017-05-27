@@ -5,7 +5,7 @@ layui.use(['form', '_route'], function () {
     , _route = layui._route
     , layer = layui.layer
     , curPosition = ''
-    , boxEle = $('.dx-info-box');
+    , boxEle = $('.qqm-info-box');
 
   // 状态判断
   switch (_route.params.type) {
@@ -24,7 +24,7 @@ layui.use(['form', '_route'], function () {
   }
 
   // 初始化当前位置
-  _route.setBreadcrumb(['后台用户管理', {url: 'backstage.user', name: '后台角色'}, curPosition]);
+  _route.setBreadcrumb(['后台用户管理', {url: 'qqm.user', name: '后台角色'}, curPosition]);
 
   // 渲染表单
   form.render();
@@ -55,7 +55,7 @@ layui.use(['form', '_route'], function () {
 
   // 监听增加按钮
   $('#add,.user-info,.user-update').on('click', function () {
-    _route.go('backstage.user.info', {type: $(this).attr('dx-type')});
+    _route.go('qqm.user.info', {type: $(this).attr('qqm-type')});
   });
 
 

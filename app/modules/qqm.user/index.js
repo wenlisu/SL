@@ -7,7 +7,7 @@ layui.use(['form', 'laypage', '_config','_route', '_fetch', '_view'], function (
     , _fetch = layui._fetch
     ,api = layui._config.api
     , layer = layui.layer
-    , _view = new layui._view('#dx-tpl');
+    , _view = new layui._view('#qqm-tpl');
 
   _fetch(api + 'user/login', {
         "phone": "15298765432",
@@ -42,7 +42,7 @@ layui.use(['form', 'laypage', '_config','_route', '_fetch', '_view'], function (
 
   // 分页初始化
   laypage({
-    cont: 'dx-page-default'
+    cont: 'qqm-page-default'
     , pages: 20
     , first: 1
     , skin: '#6a96df'
@@ -53,7 +53,7 @@ layui.use(['form', 'laypage', '_config','_route', '_fetch', '_view'], function (
 
   // 监听增加按钮
   $('#add,.user-info,.user-update').on('click', function () {
-    _route.go('backstage.user.info', {type: $(this).attr('dx-type')});
+    _route.go('qqm.user.info', {type: $(this).attr('qqm-type')});
   });
 
   // 监听禁用按钮

@@ -24,22 +24,8 @@ gulp.task('styles', () => {
         .pipe(reload({ stream: true }));
 });
 
-gulp.task('modulesStyles', () => {
-    return gulp.src('app/modules/**/*.scss')
-        .pipe($.plumber())
-        .pipe($.sourcemaps.init())
-        .pipe($.sass.sync({
-            outputStyle: 'expanded',
-            precision: 10,
-            includePaths: ['.']
-        }).on('error', $.sass.logError))
-        .pipe($.autoprefixer({ browsers: ['> 1%', 'ie >= 7'] }))
-        .pipe($.sourcemaps.write())
-        .pipe(gulp.dest('dist/modules'), { base: 'modules' })
-        .pipe(reload({ stream: true }));
-});
 
-gulp.task('compentModules',['modulesStyles'], function() {
+gulp.task('compentModules', function() {
     return gulp.src('app/modules/**/*.*')
         .pipe(gulp.dest('dist/modules'), { base: 'modules' });
 });
@@ -134,7 +120,6 @@ gulp.task('serve', ['styles', 'font'], () => {
     ]).on('change', reload);
 
     gulp.watch('app/styles/**/*.scss', ['styles']);
-    gulp.watch('app/modules/**/*.scss', ['modulesStyles']);
     gulp.watch('app/fonts/**/*', ['fonts']);
     gulp.watch('bower.json', ['wiredep', 'font']);
 });
