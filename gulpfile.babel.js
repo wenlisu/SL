@@ -23,19 +23,34 @@ gulp.task('styles', () => {
         .pipe(gulp.dest('.tmp/styles'))
         .pipe(reload({ stream: true }));
 });
-gulp.task('minifycss', () => {
-    return gulp.src('app/scripts/**/*.css')
-        .pipe(gulp.dest('dist/scripts'));
-});
-gulp.task('minifyjs', function() {
-    return gulp.src('app/scripts/**/*.js')
-        .pipe(gulp.dest('dist/scripts'));
-});
-gulp.task('compentHtml', function() {
-    return gulp.src('app/modules/*.html')
-        .pipe(gulp.dest('dist/modules'));
+
+gulp.task('modulesStyles', () => {
+    return gulp.src('app/modules/**/*.scss')
+        .pipe($.plumber())
+        .pipe($.sourcemaps.init())
+        .pipe($.sass.sync({
+            outputStyle: 'expanded',
+            precision: 10,
+            includePaths: ['.']
+        }).on('error', $.sass.logError))
+        .pipe($.autoprefixer({ browsers: ['> 1%', 'ie >= 7'] }))
+        .pipe($.sourcemaps.write())
+        .pipe(gulp.dest('dist/modules'), { base: 'modules' })
+        .pipe(reload({ stream: true }));
 });
 
+gulp.task('compentModules',['modulesStyles'], function() {
+    return gulp.src('app/modules/**/*.*')
+        .pipe(gulp.dest('dist/modules'), { base: 'modules' });
+});
+gulp.task('compentLayui', function() {
+    return gulp.src('app/plugins/**/*.*')
+        .pipe(gulp.dest('dist/plugins'));
+});
+gulp.task('jsLayerModules', function() {
+    return gulp.src('app/layui_modules/**/*.js')
+        .pipe(gulp.dest('dist/layui_modules'));
+});
 function lint(files, options) {
     return () => {
         return gulp.src(files)
@@ -53,8 +68,6 @@ const testLintOptions = {
 
 gulp.task('lint', lint('app/scripts/**/*.js'));
 gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
-
-
 
 gulp.task('html', ['styles'], () => {
     const assets = $.useref.assets({ searchPath: ['.tmp', 'app', '.'] });
@@ -87,7 +100,6 @@ gulp.task('images', () => {
 
 gulp.task('font', () => {
     return gulp.src('app/font/**/*')
-        .pipe(gulp.dest('.tmp/font'))
         .pipe(gulp.dest('dist/font'));
 });
 
@@ -122,6 +134,7 @@ gulp.task('serve', ['styles', 'font'], () => {
     ]).on('change', reload);
 
     gulp.watch('app/styles/**/*.scss', ['styles']);
+    gulp.watch('app/modules/**/*.scss', ['modulesStyles']);
     gulp.watch('app/fonts/**/*', ['fonts']);
     gulp.watch('bower.json', ['wiredep', 'font']);
 });
@@ -169,7 +182,7 @@ gulp.task('wiredep', () => {
         .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['html', 'images', 'font', 'extras', 'minifycss', 'minifyjs', 'compentHtml'], () => {
+gulp.task('build', ['html', 'images', 'font', 'extras','compentModules', 'compentLayui', 'jsLayerModules'], () => {
     return gulp.src('dist/**/*').pipe($.size({ title: 'build', gzip: true }));
 });
 
