@@ -93,9 +93,11 @@ input,
 select {
     outline-style: none;
 }
-input{
-    font-family:Microsoft YaHei;
+
+input {
+    font-family: Microsoft YaHei;
 }
+
 input::-webkit-input-placeholder {
     /* WebKit browsers */
     color: $input-placeholder-color;
@@ -119,7 +121,7 @@ input:-ms-input-placeholder {
 body {
     font-family: $font-family-global;
     color: $text-default-color;
-    background-color: $body-bg;
+    background-color: $body;
     font-size: $font-default-size;
     position: relative;
     -webkit-user-select: none;
@@ -222,6 +224,7 @@ body {
         font-size: 14px;
         line-height: 26px;
         text-align: center;
+        color:$text-bg-color;
         a {
             padding: 0 5px;
         }
@@ -235,6 +238,7 @@ body {
     }
     dd a {
         padding: 0 35px;
+        padding-left: 50px;
     }
 }
 
@@ -246,8 +250,8 @@ body {
     top: 0;
     left: 0;
     padding: 60px 0 56px 200px;
-    .qqm-breadcrumb{
-        padding: 20px 20px 0px;
+    .qqm-breadcrumb {
+        padding: 20px 25px 0px;
     }
     .qqm-content {
         width: 100%;
@@ -380,6 +384,7 @@ body {
     margin-top: -25px;
     margin-left: -220px;
     font-size: 20px;
+    color: $text-bg-color;
 }
 
 
@@ -481,7 +486,6 @@ body {
     padding: 17px 45px;
     background-color: #ffffff;
     border: solid 1px #e5e5e5;
-    border-top: none;
     .layui-form-item {
         display: inline-block;
         vertical-align: middle;

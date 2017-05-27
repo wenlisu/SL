@@ -30,21 +30,19 @@
     right: 0;
     li {
         float: left;
-        color: #d8d8d8;
+        color: $text-default-color;
         font-size: 14px;
         line-height: 60px;
         padding: 0 20px;
         position: relative;
         cursor: pointer;
         a {
-            color: #d8d8d8;
+            color: $text-default-color;
+
         }
         i {
             font-size: 28px;
             color: #242b33;
-        }
-        i:hover{
-            color:#fff;
         }
         span {
             &:first-child {
@@ -57,6 +55,12 @@
                 line-height: 38px;
                 text-align: center;
                 vertical-align: middle;
+            }
+        }
+        &:hover{
+            i,span{
+                color:$text-light-color;
+
             }
         }
     }

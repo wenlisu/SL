@@ -15,7 +15,7 @@
     <div class="layui-layout layui-layout-admin">
         <header class="layui-header header header-demo">
             <div class="layui-main">
-                <a class="logo" href="/" >
+                <a class="logo" href="/">
                     <img src="./images/logo.png" alt="layui">
                 </a>
                 <h2 class="title">缺钱么运维支撑管理系统</h2>
@@ -23,26 +23,67 @@
                     <li><a href="">欢迎您，Ls</a></li>
                     <li id="updatePassword-btn"><span><i class="iconfont icon-xiugaimima"></i></span><span>修改密码</span></li>
                     <li onclick="window.location.href='modules/login/login.html'"><span><i class="iconfont icon-tuichu"></i></span><span>退出登录</span></li>
+                    <span class="layui-nav-bar" style="left: 68px; top: 55px; width: 0px; opacity: 0;"></span>
                 </ul>
             </div>
         </header>
         <nav class="layui-side layui-bg-black">
             <ul class="layui-nav layui-nav-tree site-demo-nav" lay-filter="menu">
-                <li class="layui-nav-item layui-nav-itemed">
+                <li class="layui-nav-item">
                     <a href=""><i class="iconfont icon-yunyingshujuzhongduan" ></i>运营数据监测</a>
                     <dl class="layui-nav-child">
-                        <dd qqm-menu="qqm.role">
+                        <dd qqm-menu="qqm.monitor">
                             <a href="">运营每时粒度监控</a>
                         </dd>
-                        <dd qqm-menu="qqm.user">
+                        <dd qqm-menu="qqm.baseNumber">
                             <a href="">运营基础数据</a>
                         </dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item"><a href=""><i class="iconfont icon-hangdongrizhi"></i>后台log日志</a></li>
-                <li class="layui-nav-item"><a href=""><i class="iconfont icon-gongju"></i>运维工具</a></li>
-                <li class="layui-nav-item"><a href=""><i class="iconfont icon-jiankongfuwu"></i>机房服务器监控</a></li>
-                <li class="layui-nav-item"><a href=""><i class="iconfont icon-12-01"></i>系统管理</a></li>
+                <li class="layui-nav-item">
+                    <a href=""><i class="iconfont icon-hangdongrizhi"></i>后台log日志</a>
+                    <dl class="layui-nav-child">
+                        <dd qqm-menu="#">
+                            <a href="">线上服务器</a>
+                        </dd>
+                        <dd qqm-menu="#">
+                            <a href="">线下服务器</a>
+                        </dd>
+                        <dd qqm-menu="#">
+                            <a href="">实时log</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href=""><i class="iconfont icon-gongju"></i>运维工具</a>
+                    <dl class="layui-nav-child">
+                        <dd qqm-menu="#">
+                            <a href="">Gitlab代码管理</a>
+                        </dd>
+                        <dd qqm-menu="#">
+                            <a href="">自动化构建</a>
+                        </dd>
+                        <dd qqm-menu="#">
+                            <a href="">Bug管理</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href=""><i class="iconfont icon-jiankongfuwu"></i>机房服务器监控</a>
+                    <dl class="layui-nav-child">
+                        <dd qqm-menu="#">
+                            <a href="">cpu温度</a>
+                        </dd>
+                        <dd qqm-menu="#">
+                            <a href="">网络</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href=""><i class="iconfont icon-12-01"></i>系统管理</a>
+                    <dl class="layui-nav-child">
+                        <dd qqm-menu="#">
+                            <a href="">退出系统</a>
+                        </dd>
+                    </dl>
+                </li>
             </ul>
         </nav>
         <!-- 内容区域 -->
@@ -52,7 +93,7 @@
                 </span>
             </div>
             <div class="qqm-content" id="qqm-content">
-                <section >
+                <section>
                     <h5 class="qqm-welcome-title">欢迎进入admin，请点击左侧菜单开始操作吧！</h5>
                 </section>
             </div>
