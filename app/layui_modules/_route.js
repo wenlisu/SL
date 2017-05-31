@@ -98,9 +98,9 @@ layui.define(['layer', 'element', 'jquery'], function(exports) {
                 }
 
                 if (_.isObject(val)) {
-                    htmlStr += '<a href="javascript:void(0);" url="' + val.url + '">' + tFirst + val.name + tLast;
+                    htmlStr += '<a url="' + val.url + '">' + tFirst + val.name + tLast;
                 } else {
-                    htmlStr += '<a href="javascript:void(0);">' + tFirst + val + tLast;
+                    htmlStr += '<a >' + tFirst + val + tLast;
                 }
             });
             $('.layui-breadcrumb').html(htmlStr);

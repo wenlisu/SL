@@ -45,7 +45,6 @@ layui.use(['form', 'laypage', '_config','_route', '_fetch', '_view'], function (
     cont: 'qqm-page-default'
     , pages: 20
     , first: 1
-    , skin: '#6a96df'
     , jump: function (data) {
       layer.msg('显示第' + data.curr + '页');
     }

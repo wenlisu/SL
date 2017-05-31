@@ -13,7 +13,10 @@
         _fetch: '_fetch',
         _config: '_config',
         _route: '_route',
-        _view: '_view'
+        _view: '_view',
+        _tab: '_tab',
+        _common:'_common',
+        echarts:'echarts'
     });
     layui.use(['_route', '_config'], function() {
         var _route = layui._route
