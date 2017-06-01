@@ -13,10 +13,12 @@ layui.use(['form', 'laypage', '_config','_route', '_fetch', '_view'], function (
         "phone": "15298765432",
         "password": "123456"
     }).then(function(data) {
-        console.log("data", data);
+        // console.log("data", data);
     }, function(err) {
-        console.log("err", err);
+        // console.log("err", err);
+        layer.alert(err);
     });
+        layer.alert('err', {icon: 2});
 
 
   // 初始化当前位置
@@ -45,7 +47,7 @@ layui.use(['form', 'laypage', '_config','_route', '_fetch', '_view'], function (
     , pages: 20
     , first: 1
     , jump: function (data) {
-      layer.msg('显示第' + data.curr + '页');
+      // layer.msg('显示第' + data.curr + '页');
     }
   });
 

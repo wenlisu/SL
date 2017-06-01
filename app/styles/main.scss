@@ -566,7 +566,19 @@ body {
 //echarts
 .chartMain {
     margin: 0 auto;
-    padding: 40px 0;
+    padding: 50px 0;
     width: 700px;
     height: 400px;
 }
+
+
+// layer-qqm-open
+.qqm-layer-open{
+    .layui-layer-btn0{
+        border-color: #009688;
+    background-color: #009688;
+    }
+}
+
+
+

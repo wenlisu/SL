@@ -15,13 +15,14 @@
         _route: '_route',
         _view: '_view',
         _tab: '_tab',
-        _common:'_common',
-        _method:'_method',
-        echarts:'echarts'
+        _common: '_common',
+        _method: '_method',
+        echarts: 'echarts'
     });
+ 
     layui.use(['_route', '_config'], function() {
-        var _route = layui._route
-        ,_config = layui._config;
+        var _route = layui._route,
+            _config = layui._config;
         _route.config.base = 'modules/{0}/index.html';
 
         // 开启模拟数据

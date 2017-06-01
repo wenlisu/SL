@@ -57,13 +57,13 @@
                 <li class="layui-nav-item"><a href=""><i class="iconfont icon-gongju"></i>运维工具</a>
                     <dl class="layui-nav-child">
                         <dd qqm-title="Gitlab代码管理" onclick="window.open('http://gitlab.gz.queqianme.com/')">
-                            <a >Gitlab代码管理</a>
+                            <a>Gitlab代码管理</a>
                         </dd>
                         <dd qqm-title="自动化构建" onclick="window.open('http://jenkins.gz.queqianme.com:8182/')">
-                            <a >自动化构建</a>
+                            <a>自动化构建</a>
                         </dd>
                         <dd qqm-title="Bug管理" onclick="window.open('http://redmine.gz.queqianme.com:8787/redmine/login')">
-                            <a >Bug管理</a>
+                            <a>Bug管理</a>
                         </dd>
                     </dl>
                 </li>
@@ -90,7 +90,7 @@
         <div class="layui-body" style="bottom: 0;border-left: solid 2px #1AA094;" id="admin-body">
             <div class="layui-tab admin-nav-card layui-tab-brief qqm-module" lay-filter="admin-tab">
                 <ul class="layui-tab-title">
-                    <li class="layui-this">
+                    <li class="layui-this" lay-id="index">
                         <i class="layui-icon" aria-hidden="true">&#xe630;</i>
                         <cite>控制面板</cite>
                     </li>
@@ -162,7 +162,6 @@
             tab = layui._tab;
 
         window.$ = layui.jquery;
-
         tab = tab({
             elem: '.admin-nav-card' //设置选项卡容器
                 ,
@@ -207,10 +206,10 @@
         _route.setBreadcrumb(null, {
             hide: true
         });
-        
-        $('#qqm-content').css('height', $(window).height() - 156);
+
+        $('#qqm-content').css('height', $(window).height() - 200);
         $(window).resize(function() {
-            $('#qqm-content').css('height', $(window).height() - 156);
+            $('#qqm-content').css('height', $(window).height() - 200);
         });
 
     });
