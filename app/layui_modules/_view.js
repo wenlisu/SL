@@ -10,11 +10,11 @@ layui.define(['laytpl'], function (exports) {
   }
 
 
-  _view.prototype.render = function (data) {
+  _view.prototype.render = function (view,data) {
     var _this = this;
 
-    laytpl(_this.elHtml).render({test: 'hello world'}, function (html) {
-      _this.el.html(html);
+    laytpl(_this.elHtml).render(data, function (html) {
+      view.html(html);
     });
   };
 

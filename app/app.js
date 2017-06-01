@@ -16,6 +16,7 @@
         _view: '_view',
         _tab: '_tab',
         _common:'_common',
+        _method:'_method',
         echarts:'echarts'
     });
     layui.use(['_route', '_config'], function() {

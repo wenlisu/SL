@@ -147,7 +147,9 @@ a {
     color: $text-default-color;
     font-family: Microsoft YaHei, Tahoma, Arial, sans-serif;
 }
-
+.layui-breadcrumb a:hover{
+        color:#009688 !important;
+}
 cite,
 em {
     font-style: normal;
@@ -273,12 +275,13 @@ body {
         }
     }
     .qqm-content {
+        overflow: hidden;
         width: 100%;
         height: 100%;
         box-sizing: border-box;
         overflow-y: auto;
         padding-top: 10px;
-        padding-bottom: 60px;
+        padding-bottom: 83px;
         position: relative;
     }
 }
@@ -291,6 +294,18 @@ body {
     min-height: 100%;
     box-sizing: border-box;
     padding: 20px 24px 115px 24px;
+    &.index-updatePassword {
+        display: none;
+        padding: 20px 0 10px!important;
+        .layui-form-item {
+            .layui-form-label {
+                width: 96px;
+            }
+            .layui-input-block {
+                margin-left: 120px;
+            }
+        }
+    }
     .qqm-info-box {
         background-color: #ffffff;
         width: 100%;
@@ -551,7 +566,7 @@ body {
 //echarts
 .chartMain {
     margin: 0 auto;
-    padding:40px 0; 
+    padding: 40px 0;
     width: 700px;
     height: 400px;
 }

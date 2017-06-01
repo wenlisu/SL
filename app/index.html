@@ -43,26 +43,26 @@
                 <li class="layui-nav-item">
                     <a href=""><i class="iconfont icon-hangdongrizhi"></i>后台log日志</a>
                     <dl class="layui-nav-child">
-                        <dd qqm-title="线上服务器" qqm-menu="#">
+                        <dd qqm-title="线上服务器" qqm-menu="qqm.onlineServer">
                             <a>线上服务器</a>
                         </dd>
-                        <dd qqm-title="线上服务器"  qqm-menu="#">
+                        <dd qqm-title="线下服务器" qqm-menu="qqm.offlineServer">
                             <a>线下服务器</a>
                         </dd>
-                        <dd qqm-title="线上服务器"  qqm-menu="#">
+                        <dd qqm-title="实时log" qqm-menu="qqm.log">
                             <a>实时log</a>
                         </dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item"><a href=""><i class="iconfont icon-gongju"></i>运维工具</a>
                     <dl class="layui-nav-child">
-                        <dd qqm-title="Gitlab代码管理"  qqm-menu="#">
+                        <dd qqm-title="Gitlab代码管理" qqm-menu="#">
                             <a>Gitlab代码管理</a>
                         </dd>
-                        <dd qqm-title="自动化构建"  qqm-menu="#">
+                        <dd qqm-title="自动化构建" qqm-menu="#">
                             <a>自动化构建</a>
                         </dd>
-                        <dd qqm-title="Bug管理"  qqm-menu="#">
+                        <dd qqm-title="Bug管理" qqm-menu="#">
                             <a>Bug管理</a>
                         </dd>
                     </dl>
@@ -106,11 +106,45 @@
                 </div>
             </div>
         </div>
-        <footer class="layui-footer footer footer-demo">
+        <footer class="layui-footer footer footer-doc">
             <div class="layui-main">
                 <p>Copyright©2015 广东缺钱么网络科技有限公司</p>
             </div>
         </footer>
+    </div>
+    <!--修改密码弹窗-->
+    <div id="updatePassword" class="index-updatePassword qqm-info-default">
+        <form class="layui-form" action="">
+            <div class="layui-form-item">
+                <label class="layui-form-label">账号</label>
+                <div class="layui-input-block qqm-input-required">
+                    <input type="text" name="username" lay-verify="required" autocomplete="off" placeholder="请输入账号" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">旧密码</label>
+                <div class="layui-input-block qqm-input-required">
+                    <input type="password" name="oldPassword" lay-verify="required" autocomplete="off" placeholder="请输入旧密码" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">新密码</label>
+                <div class="layui-input-block qqm-input-required">
+                    <input type="password" name="password" lay-verify="required" autocomplete="off" placeholder="请输入新密码" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">确认密码</label>
+                <div class="layui-input-block qqm-input-required">
+                    <input type="password" name="confirmPassword" lay-verify="required" autocomplete="off" placeholder="请确认密码" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit="" lay-filter="updatePassword">提交</button>
+                </div>
+            </div>
+        </form>
     </div>
     <script type="text/javascript" src="plugins/layui/layui.js"></script>
     <script type="text/javascript" src="app.js?__inline"></script>
@@ -119,14 +153,16 @@
     <script type="text/javascript" src="scripts/index.js?__inline"></script>
     <!-- endbuild -->
     <script type="text/javascript">
-    layui.use(['layer', 'element', '_route', 'form', '_tab'], function() {
+    layui.use(['layer', 'util', 'element', '_route', 'form', '_tab'], function() {
         var layer = layui.layer,
+            util = layui.util,
             element = layui.element(),
             form = layui.form(),
             _route = layui._route,
             tab = layui._tab;
 
         window.$ = layui.jquery;
+
         tab = tab({
             elem: '.admin-nav-card' //设置选项卡容器
                 ,
@@ -170,6 +206,11 @@
         // 初始化欢迎页面
         _route.setBreadcrumb(null, {
             hide: true
+        });
+        
+        $('#qqm-content').css('height', $(window).height() - 156);
+        $(window).resize(function() {
+            $('#qqm-content').css('height', $(window).height() - 156);
         });
 
     });
